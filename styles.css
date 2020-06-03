@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body * {
+  border: 0px solid red;
+  padding: 0px;
+}
+
+.container {
+  width: auto;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container .slide-nav { background-color: hsla(240, 100%, 50%, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  height: 100vh;
+  width: 0;
+
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  z-index: 1;
+}
+
+.container .slide-nav .close-btn {
+  display: flex;
+  visibility: visible;
+
+  height: auto;
+  width: auto;
+
+  padding: 4px;
+  padding-left: 8px;
+}
+
+.container .slide-nav a {
+  margin: 20px;
+  padding: 10px;
+}
+
+.container header { background-color: hsla(0, 100%, 50%, 0.5);
+  display: flex;
+  position: relative;
+
+  width: auto;
+  height: 60px;
+
+  grid-column: auto;
+  grid-row: 1;
+}
+
+.container header .open-btn {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  visibility: visible;
+
+  height: auto;
+  width: auto;
+
+  padding: 4px;
+}
+
+.container header .open-btn span {
+  height: 10px;
+  width: 30px;
+
+  border-top: 4px solid #000000;
+}
+
+.container header .banner {
+  display: flex;
+
+  height: auto;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.container header .banner #logo { background-color: #000000;
+  height: 50px;
+  width: 50px;
+
+  margin: 2px;
+}
+
+.container header .banner #title {
+  max-height: 40px;
+  width: auto;
+
+  font-size: 2.5em;
+
+  margin: 2px;
+}
+
+.container main { background-color: hsla(39, 100%, 50%, 0.5);
+  width: auto;
+  height: auto;
+
+  grid-column: auto;
+  grid-row: 2;
+}
+
+.container footer { background-color: hsla(60, 100%, 50%, 0.5);
+  display: flex;
+  position: sticky;
+
+  height: 30px;
+  width: auto;
+
+  grid-column: auto;
+  grid-row: 3;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .slide-nav .close-btn {}
+
+  .container .slide-nav .close-btn span {
+    font-size: 2em;
+  }
+
+  .container header {
+    width: auto;
+    height: 100px;
+  }
+
+  .container header .open-btn {}
+
+  .container header .open-btn span {}
+
+  .container header .banner {}
+
+  .container header .banner #logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .container header .banner #title {
+    max-height: 80px;
+    width: auto;
+
+    font-size: 3em;
+  }
+
+  .container footer {
+    height: 50px;
+    width: auto;
+  }
+}
