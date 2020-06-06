@@ -10,17 +10,17 @@
   </head>
   <body>
     <div class= "container">
-      <div class="slide-nav">
-        <div class="close-btn">
-          <span>X</span>
+      <div id="the-snav" class="slide-nav">
+        <div href="javascript:void(0)" class="close-btn" onclick="close_snav()"></div>
+        <div class="snav-links">
+          <a href="#">Link-1</a>
+          <a href="#">Link-2</a>
+          <a href="#">Link-3</a>
+          <a href="#">Link-4</a>
         </div>
-        <a href="#">Link-1</a>
-        <a href="#">Link-2</a>
-        <a href="#">Link-3</a>
-        <a href="#">Link-4</a>
       </div>
       <header>
-        <div class="open-btn">
+        <div class="open-btn" onclick="open_snav()">
           <span></span>
           <span></span>
           <span></span>
@@ -38,6 +38,13 @@
       </footer>
     </div>
     <script type="text/javascript">
+      function open_snav() {
+        document.getElementById("the-snav").style.width = "100vw";
+      }
+
+      function close_snav() {
+        document.getElementById("the-snav").style.width = "0";
+      }
     </script>
   </body>
 </html>
