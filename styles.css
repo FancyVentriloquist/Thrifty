@@ -27,9 +27,11 @@ body * {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 1fr auto;
+
+  transition: all 0.5s ease-out;
 }
 
-.container .slide-nav { background-color: hsla(240, 100%, 50%, 0.5);
+.slide-nav { background-color: hsla(240, 100%, 50%, 0.5);
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -42,10 +44,10 @@ body * {
   margin: 0;
   border: 0;
   z-index: 1;
-  transition: width 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-.container .slide-nav .close-btn {
+.slide-nav .close-btn {
   display: flex;
   position: absolute;
 
@@ -57,32 +59,32 @@ body * {
   margin: 6px;
 }
 
-.container .slide-nav .close-btn:before {
+.slide-nav .close-btn:before {
   position: absolute;
   content: "";
   height: 30px;
   border-left: 4px solid #000000;
-  right: 15px;
+  right: 0px;
   transform: rotate(-45deg)
 }
 
-.container .slide-nav .close-btn:after {
+.slide-nav .close-btn:after {
   position: absolute;
   content: "";
   height: 30px;
   border-left: 4px solid #000000;
-  right: 15px;
+  right: 0px;
   transform: rotate(45deg)
 }
 
-.container .slide-nav .snav-links {
+.slide-nav .snav-links {
   display: flex;
   flex-direction: column;
 
   padding-top: 100px;
 }
 
-.container .slide-nav .snav-links a {
+.slide-nav .snav-links a {
   margin: 20px;
   padding: 10px;
 
@@ -112,7 +114,7 @@ body * {
   height: auto;
   width: auto;
 
-  padding: 4px;
+  padding: 6px;
 }
 
 .container header .open-btn span {

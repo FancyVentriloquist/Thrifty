@@ -9,18 +9,18 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <div class= "container">
-      <div id="the-snav" class="slide-nav">
-        <div href="javascript:void(0)" class="close-btn" onclick="close_snav()"></div>
-        <div class="snav-links">
-          <a href="#">Link-1</a>
-          <a href="#">Link-2</a>
-          <a href="#">Link-3</a>
-          <a href="#">Link-4</a>
-        </div>
+    <div id="the-snav" class="slide-nav">
+      <div href="javascript:void(0)" id="close_btn" class="close-btn" onclick="close_snav()"></div>
+      <div class="snav-links">
+        <a href="#">Link-1</a>
+        <a href="#">Link-2</a>
+        <a href="#">Link-3</a>
+        <a href="#">Link-4</a>
       </div>
+    </div>
+    <div id="cont" class="container">
       <header>
-        <div class="open-btn" onclick="open_snav()">
+        <div id="open_btn" class="open-btn" onclick="open_snav()">
           <span></span>
           <span></span>
           <span></span>
@@ -39,11 +39,13 @@
     </div>
     <script type="text/javascript">
       function open_snav() {
-        document.getElementById("the-snav").style.width = "100vw";
+        document.getElementById("the-snav").style.width = "20vw";
+        document.getElementById("cont").style.marginLeft = "20vw";
       }
 
       function close_snav() {
         document.getElementById("the-snav").style.width = "0";
+        document.getElementById("cont").style.marginLeft = "0";
       }
     </script>
   </body>
